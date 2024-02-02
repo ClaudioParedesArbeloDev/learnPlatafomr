@@ -1,22 +1,110 @@
 @import "./colors";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap');
 
+.cursosNav{
+  display: flex;
+  padding: 20px 0 20px 0;
+  background-color: #181818;
+  justify-content: space-around;
+  align-items: center;
+  nav{
+      display: flex;
+  }
+}
+.titleCursos{
+    display: flex;
+    align-items: center;
+    img{
+        width: 70px;
+        margin-right: 20px;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      h1{
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.6em;    
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+       }
+      p{
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+        text-transform: lowercase;
+        text-align: center;
+       }
+  }
+}
+
+.btnC {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: $textColor;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  
+}
+
+.btnC::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: $secondaryColor;
+  transition: 0.5s ease;
+}
+
+.btnC:hover {
+  color: #162938;
+  transition-delay: 0.5s;
+}
+
+.btnC:hover::before {
+  width: 100%;
+}
+
+.btnC::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: $secondaryColor;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btnC:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
 .cursos{
+  background-image: url('../../img/pexels-jess-bailey-designs-1097930.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
-    margin-left: 200px;
-    height: 90vh;
+      height: 90vh;
     
     h2{
-        color: #fff;
+        color: #181818;
         font-family: 'Roboto Mono', monospace;
         margin-bottom: 30px;
         font-size: 3em;
     }
     a{
         text-decoration: none;
-        color: #fff;
+        color: #181818;
         font-family: 'Roboto Mono', monospace;
         font-size: 2em;
         line-height: 2em;
@@ -39,7 +127,7 @@
     bottom: 30px;
     flex-direction: column;
     p{
-        color: #fff;
+        color: #181818;
         display: flex;
         justify-content: center;
         font-family: 'Roboto Mono', monospace;

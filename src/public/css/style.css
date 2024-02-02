@@ -385,22 +385,110 @@ footer p i {
   color: #4c8a6b;
 }
 
-.cursos {
+.cursosNav {
+  display: flex;
+  padding: 20px 0 20px 0;
+  background-color: #181818;
+  justify-content: space-around;
+  align-items: center;
+}
+.cursosNav nav {
+  display: flex;
+}
+
+.titleCursos {
+  display: flex;
+  align-items: center;
+}
+.titleCursos img {
+  width: 70px;
+  margin-right: 20px;
+}
+.titleCursos div {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
-  margin-left: 200px;
+}
+.titleCursos div h1 {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+.titleCursos div p {
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.btnC {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btnC::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.btnC:hover {
+  color: #162938;
+  transition-delay: 0.5s;
+}
+
+.btnC:hover::before {
+  width: 100%;
+}
+
+.btnC::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btnC:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.cursos {
+  background-image: url("../../img/pexels-jess-bailey-designs-1097930.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   height: 90vh;
 }
 .cursos h2 {
-  color: #fff;
+  color: #181818;
   font-family: "Roboto Mono", monospace;
   margin-bottom: 30px;
   font-size: 3em;
 }
 .cursos a {
   text-decoration: none;
-  color: #fff;
+  color: #181818;
   font-family: "Roboto Mono", monospace;
   font-size: 2em;
   line-height: 2em;
@@ -421,7 +509,7 @@ footer p i {
   flex-direction: column;
 }
 .footerCursos p {
-  color: #fff;
+  color: #181818;
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
