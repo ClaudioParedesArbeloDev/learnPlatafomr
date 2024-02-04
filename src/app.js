@@ -20,7 +20,9 @@ app.get('/sobremi', (req, res) => {
 app.get('/cursos', (req, res) => {
     res.render('cursos')
 })
-
+app.get('/contacto', (req, res) => {
+    res.render('contacto')
+})
 
 
 app.listen(8080)
