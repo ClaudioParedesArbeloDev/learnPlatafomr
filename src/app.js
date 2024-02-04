@@ -23,6 +23,9 @@ app.get('/cursos', (req, res) => {
 app.get('/contacto', (req, res) => {
     res.render('contacto')
 })
+app.get('/registro', (req, res) => {
+    res.render('registro')
+})
 
 
 app.listen(8080)
