@@ -1,5 +1,4 @@
- 
- <header>
+<header>
   <div class="title">
     <img src="/img/fullstack.svg" alt="logo" />
     <div>
@@ -9,46 +8,25 @@
   </div>
   <nav>
     <div class="buttons">
-      <a href="./registro"><button class="btn">home</button></a>
+      <a href="./"><button class="btn">home</button></a>
       <a href="./cursos"><button class="btn">cursos</button></a>
       <a href="./sobremi"><button class="btn">sobre mi</button></a>
       <a href="./contacto"><button class="btn">contacto</button></a>
     </div>
   </nav>
 </header>
-  <form action="registro/registro" method="post" class="formRegistro">
-    <div class="input-boxR">
-      <input type="text" name="nombre" required placeholder="Nombre Completo">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="apellido" required placeholder="Apellido">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="dni" required placeholder="Numero de documento">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="domicilio" required placeholder="Domicilio">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="celular" required placeholder="Nro Celular">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="fechaNacimiento" required placeholder="Fecha Nacimiento">
-    </div>
-    <div class="input-boxR">
-            <input type="email" name="email" required placeholder="Correo Electrónico">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="password" required placeholder="Password">
-    </div>
-    <div class="input-boxR">
-      <input type="text" required placeholder="Repita Password">
-    </div>
-    
-    <button type="submit" class="submitForm">Enviar</button>
-    
-  </form>
 
+<div class="listadoWrapper">
+    <h2>Listado alumnos</h2>
+
+<div>
+    {{#each listado}}
+    <div>
+       <p>{{this.nombre}}</p>
+    </div>
+    {{/each}}
+</div>
+</div>
 <footer>
   <div class="socialMedia">
     <a href="https://www.instagram.com/claudioparedes_developer/" target="_blank" class="Btn">

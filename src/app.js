@@ -8,6 +8,8 @@ import sobremiRouter from './routes/sobremi.router.js'
 import cursosRouter from './routes/cursos.router.js'
 import contactoRouter from './routes/contacto.router.js'
 import registroRouter from './routes/registro.router.js'
+import listadoRouter from './routes/listado.router.js'
+import individualRouter from './routes/individual.router.js'
 
 
 const app = express()
@@ -30,6 +32,11 @@ app.use('/cursos', cursosRouter)
 app.use('/contacto', contactoRouter)
 
 app.use('/registro', registroRouter)
+
+app.use('/listado', listadoRouter)
+
+app.use('/individual', individualRouter)
+
 
 const URL = "mongodb+srv://claudioparedes:Cabeza2$@cluster1.rimje8x.mongodb.net/?retryWrites=true&w=majority"
 

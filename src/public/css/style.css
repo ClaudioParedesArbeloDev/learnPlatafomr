@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -816,4 +817,11 @@ footer p i {
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
+}
+.listadoWrapper {
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
+}
+.listadoWrapper h2 {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

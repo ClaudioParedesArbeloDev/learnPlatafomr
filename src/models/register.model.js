@@ -1,13 +1,21 @@
 import mongoose from "mongoose";
 
 
-const pictureSchema = new mongoose.Schema({
-    location: String,
-    description: String,
-    picture: String
+const registroCollection = 'alumnos'
+
+const registroSchemma = new mongoose.Schema({
+    nombre: String,
+    apellido: String,
+    dni: Number,
+    domicilio: String,
+    celular: Number,
+    fechaNacimiento: String,
+    email: String,
+    password: String,
+    fotocopia: String,
+    avatar: String
 })
 
+const registroModel = mongoose.model(registroCollection, registroSchemma)
 
-const pictureModel = mongoose.model('pictures', pictureSchema)
-
-export default pictureModel 
+export default registroModel 
