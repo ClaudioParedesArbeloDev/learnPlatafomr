@@ -34,23 +34,26 @@
         </div>
 
     </div>
-    <form class="formContacto">
+    <form class="formContacto" action="https://formsubmit.co/932d88bc19abf67082ce684ef6bbb554" method="POST">
         <div class="input-boxF">
-            <input type="text" required placeholder="Nombre y Apellido">
+            <input type="text" name="name" placeholder="Nombre y Apellido">
             <i class="fa-solid fa-user"></i>
         </div>
         <div class="input-boxF">
-            <input type="email" required placeholder="Correo Electrónico">
+            <input type="email" name="email" required placeholder="Correo Electrónico">
             <i class="fa-solid fa-envelope"></i>
         </div>
         <div class="input-boxF">
-            <input type="text" required placeholder="Asunto">
+            <input type="text" name="asunto" required placeholder="Asunto">
             <i class="fa-solid fa-pen"></i>
         </div>
         <div class="input-boxF">
-            <textarea id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+            <textarea id="" cols="30" rows="10" name="comentario" placeholder="Escribe tu mensaje"></textarea>
         </div>
         <button type="submit">Enviar</button>
+
+        <input type="hidden" name="_next" value="http://localhost:8080">
+        <input type="hidden" name="_captcha" value="false">
     </form>
 </div>
 </section>

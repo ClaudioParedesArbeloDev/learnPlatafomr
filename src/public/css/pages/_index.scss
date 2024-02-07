@@ -3,304 +3,303 @@
 
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(/img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(/img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header{
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 0 30px 0;
-    nav{
-        display: flex;
-        
-    }
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 30px 0;
+  nav{
+      display: flex;
+      
+  }
 }
 .title{
-    
-    display: flex;
-    align-items: center;
-    img{
-        width: 70px;
-        margin-right: 20px;
-    }
-    h1{
-        color: #fff;
-        font-family: 'Lato', sans-serif;
-        font-size: 1.6em;    
-        text-transform: uppercase;
-        
-    }
-    p{
-        color: #fff;
-        font-family: 'Roboto Mono', monospace;
-        text-transform: lowercase;
-        text-align: center;
-    }
+  
+  display: flex;
+  align-items: center;
+  img{
+      width: 70px;
+      margin-right: 20px;
+  }
+  h1{
+      color: $textColor;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.6em;    
+      text-transform: uppercase;
+      
+  }
+  p{
+      color: $textColor;
+      font-family: 'Roboto Mono', monospace;
+      text-transform: lowercase;
+      text-align: center;
+  }
 }
 
 
 .btn {
-    font-size: 17px;
-    background: transparent;
-    border: none;
-    padding: 1em 1.5em;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-    transition: 0.5s ease;
-    cursor: pointer;
-    
-  }
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: $textColor;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
   
-  .btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: $secondaryColor;
-    transition: 0.5s ease;
-  }
-  
-  .btn:hover {
-    color: #162938;
-    transition-delay: 0.5s;
-  }
-  
-  .btn:hover::before {
-    width: 100%;
-  }
-  
-  .btn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    background-color: $secondaryColor;
-    transition: 0.4s ease;
-    z-index: -1;
-  }
-  
-  .btn:hover::after {
-    height: 100%;
-    transition-delay: 0.4s;
-    color: aliceblue;
-  }
+}
 
- 
-  .loginBox{
-    position: absolute;
-    display: flex;
-    width: 60%;
-    justify-content: center;
-    top: 280px;
+.btn::before {
+  content: "";
+  position: absolute;
+left: 0;
+bottom: 0;
+height: 2px;
+width: 0;
+background-color: $variantColor;
+transition: 0.5s ease;
+}
+
+.btn:hover {
+color: $primaryColor;
+transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+width: 100%;
+}
+
+.btn::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 0;
+width: 100%;
+background-color: $variantColor;
+transition: 0.4s ease;
+z-index: -1;
+}
+
+.btn:hover::after {
+height: 100%;
+transition-delay: 0.4s;
+color: aliceblue;
+}
+
+
+.loginBox{
+position: absolute;
+display: flex;
+width: 60%;
+justify-content: center;
+top: 280px;
+}
+
+.wrapper{
+position: relative;
+width: 400px;
+height: 440px;
+background: transparent;
+border: 2px solid rgba(177, 12, 67, 0.5);
+border-radius: 20px;
+backdrop-filter: blur(20px);
+box-shadow: 0 0 30px rgba(177, 12, 67, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Roboto Mono', monospace;
+}
+.form-box{
+width: 100%;
+padding: 40px;
+h2{
+  font-size: 2em;
+  color: $textColor;
+  text-align: center;
+}
+}
+
+.input-box{
+position: relative;
+width: 100%;
+height: 50px;
+border-bottom: 2px solid $textColor;
+margin: 30px 0;
+label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: $textColor;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $textColor;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+top: -5px;
+}
+
+.icon{
+position: absolute;
+right: 8px;
+font-size: 1.2em;
+color: $textColor;
+line-height: 57px;
+
+}
+
+.remember-forgot{
+font-size: .9em;
+color: $textColor;
+font-weight: 500;
+margin: -15px 0 15px;
+display: flex;
+justify-content: space-between;
+label{
+  input{
+    accent-color: $textColor;
+    margin-right: 5px;
   }
- 
-  .wrapper{
-    position: relative;
-    width: 400px;
-    height: 440px;
-    background: transparent;
-    border: 2px solid rgba(48, 102, 34, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+a{
+  color: $textColor;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+}
+.btnr{
+width: 100%;
+height: 45px;
+background:  $variantColor;
+border: none;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1em;
+color: $textColor;
+font-weight: 500;
+}
+
+.login-register{
+font-size: .9em;
+color: $textColor;
+text-align: center;
+font-weight: 500;
+margin: 25px 0 10px;
+p{
+  a{
+    color: $textColor;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+}
+
+footer{
+display: flex;
+width: 100vw;
+position: absolute;
+bottom: 40px;
+flex-direction: column;
+p{
+    padding-top: 10px;
+    color: $textColor;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: 'Roboto Mono', monospace;
-  }
-  .form-box{
-    width: 100%;
-    padding: 40px;
-    h2{
-      font-size: 2em;
-      color: #fff;
-      text-align: center;
-    }
-  }
-  
-  .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #fff;
-    margin: 30px 0;
-    label{
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-      font-size: 1em;
-      color: #fff;
-      font-weight: 500;
-      pointer-events: none;
-      transition: .5s;
-    }
-    input{
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: #fff;
-      font-size: 1em;
-      font-weight: 600;
-      padding: 0 35px 0 5px;
-    }
-  }
-
-  .input-box input:focus~label,
-  .input-box input:valid~label{
-    top: -5px;
-  }
-
-  .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 57px;
-
-  }
-
-  .remember-forgot{
-    font-size: .9em;
-    color: #fff;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
-    label{
-      input{
-        accent-color: #fff;
-        margin-right: 5px;
-      }
-    }
-    a{
-      color: #fff;
-      text-decoration: none;
-    }
-    a:hover{
-      text-decoration: underline;
-    }
-  }
-  .btnr{
-    width: 100%;
-    height: 45px;
-    background:  #162938;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-  }
-
-  .login-register{
-    font-size: .9em;
-    color: #fff;
+    font-size: 1.1rem;
     text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
-    p{
-      a{
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      a:hover{
-        text-decoration: underline;
-      }
+    i{
+      margin-right: 5px;
     }
-  }
+}
+}
+.socialMedia{
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
 
-  footer{
-    display: flex;
-    width: 100vw;
-    position: absolute;
-    bottom: 40px;
-    flex-direction: column;
-    p{
-        padding-top: 10px;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        font-family: 'Roboto Mono', monospace;
-        font-size: 1.1rem;
-        text-align: center;
-        i{
-          margin-right: 5px;
-        }
-    }
-  }
-  .socialMedia{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-  
-  .Btn {
-    margin-right: 10px;
-    margin-left: 10px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    /* overflow: hidden; */
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .svgContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    backdrop-filter: blur(0px);
-    letter-spacing: 0.8px;
-    border-radius: 10px;
-    transition: all 0.3s;
-    border: 1px solid rgba(156, 156, 156, 0.466);
-  }
-  
-  .BG {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #181818;
-    z-index: -1;
-    border-radius: 10px;
-    pointer-events: none;
-    transition: all 0.3s;
-  }
-  
-  .Btn:hover .BG {
-    transform: rotate(35deg);
-    transform-origin: bottom;
-  }
-  
-  .Btn:hover .svgContainer {
-    background-color: rgba(156, 156, 156, 0.466);
-    backdrop-filter: blur(4px);
-  }
+.Btn {
+margin-right: 10px;
+margin-left: 10px;
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+background-color: transparent;
+position: relative;
+border-radius: 7px;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.svgContainer {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: transparent;
+backdrop-filter: blur(0px);
+letter-spacing: 0.8px;
+border-radius: 10px;
+transition: all 0.3s;
+border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+position: absolute;
+content: "";
+width: 100%;
+height: 100%;
+background: #181818;
+z-index: -1;
+border-radius: 10px;
+pointer-events: none;
+transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+transform: rotate(35deg);
+transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+background-color: $variantColor;
+backdrop-filter: blur(4px);
+}
