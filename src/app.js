@@ -10,6 +10,7 @@ import contactoRouter from './routes/contacto.router.js'
 import registroRouter from './routes/registro.router.js'
 import listadoRouter from './routes/listado.router.js'
 import individualRouter from './routes/individual.router.js'
+import plataformaRouter from './routes/plataforma.router.js'
 
 
 const app = express()
@@ -36,6 +37,8 @@ app.use('/registro', registroRouter)
 app.use('/listado', listadoRouter)
 
 app.use('/individual', individualRouter)
+
+app.use('/plataforma', plataformaRouter)
 
 
 const URL = "mongodb+srv://claudioparedes:Cabeza2$@cluster1.rimje8x.mongodb.net/?retryWrites=true&w=majority"
