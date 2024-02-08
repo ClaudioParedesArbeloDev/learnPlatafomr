@@ -82,6 +82,34 @@
     }
 }
 
+.custom-file-upload {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    width: 300px;
+    overflow: hidden;
+    margin-right: 10px; 
+    padding: 10px 20px; 
+    background-color: crimson; 
+    color: $textColor; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+  .custom-file-upload:hover{
+    background: rgb(150, 13, 40);
+  }
+  .custom-file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px; 
+    cursor: pointer; 
+    opacity: 0; 
+  }
+    
+
 .submitForm{
     width: 200px;
     

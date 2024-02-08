@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -803,6 +804,35 @@ footer p i {
   right: 15px;
 }
 
+.custom-file-upload {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  width: 300px;
+  overflow: hidden;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-upload:hover {
+  background: rgb(150, 13, 40);
+}
+
+.custom-file-upload input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
 .submitForm {
   width: 200px;
 }
@@ -824,4 +854,19 @@ footer p i {
 }
 .listadoWrapper h2 {
   color: #fff;
+}
+
+.registroCompletado {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Mono", monospace;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.registroCompletado p {
+  padding-top: 30px;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

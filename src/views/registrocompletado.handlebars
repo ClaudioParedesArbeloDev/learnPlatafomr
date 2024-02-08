@@ -1,4 +1,3 @@
- 
  <header>
   <div class="title">
     <img src="/img/fullstack.svg" alt="logo" />
@@ -16,45 +15,10 @@
     </div>
   </nav>
 </header>
-  <form action="registro/registro" method="post" class="formRegistro" enctype="multipart/form-data">
-    <div class="input-boxR">
-      <input type="text" name="nombre" required placeholder="Nombre Completo">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="apellido" required placeholder="Apellido">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="dni" required placeholder="Numero de documento">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="domicilio" required placeholder="Domicilio">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="celular" required placeholder="Nro Celular">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="fechaNacimiento" required placeholder="Fecha Nacimiento">
-    </div>
-    <div class="input-boxR">
-            <input type="email" name="email" required placeholder="Correo Electrónico">
-    </div>
-    <div class="input-boxR">
-      <input type="text" name="password" required placeholder="Password">
-    </div>
-    <div class="input-boxR">
-      <input type="text" required placeholder="Repita Password">
-    </div>
-    <div class="fileDNI">
-  <label for="dniFile" class="custom-file-upload">
-    <input type="file" id="dniFile" name="file" required>
-    Suba su foto DNI (máx. 2MB)
-  </label>
-</div>
-
-    <button type="submit" class="submitForm">Enviar</button>
-    
-  </form>
-
+<main class="registroCompletado">
+    <h2>su registro fue completado con exito!!!!</h2>
+    <p>en <span id="countdown">5</span> seg será redirigido a la pagina principal...</p>
+</main>
 <footer>
   <div class="socialMedia">
     <a href="https://www.instagram.com/claudioparedes_developer/" target="_blank" class="Btn">
@@ -129,4 +93,6 @@
   </div>
   <p><i class="fa-regular fa-copyright"></i><span id="year"></span> - Claudio Paredes Arbelo</p>
 </footer>
+
+<script src="/js/registrocompletado.js"></script>
 <script src="/js/index.js"></script>
