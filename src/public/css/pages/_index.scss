@@ -23,6 +23,12 @@ header{
       
   }
 }
+.hamburguer{
+  color: $textColor;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
 .title{
   
   display: flex;
@@ -302,4 +308,12 @@ transform-origin: bottom;
 .Btn:hover .svgContainer {
 background-color: $variantColor;
 backdrop-filter: blur(4px);
+}
+
+@media  (max-width: 700px) {
+  body{
+    background-image: url(/img/pexels-markus-spiske-12081657.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

@@ -27,6 +27,13 @@ header nav {
   display: flex;
 }
 
+.hamburguer {
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -304,6 +311,13 @@ footer p i {
           backdrop-filter: blur(4px);
 }
 
+@media (max-width: 700px) {
+  body {
+    background-image: url(/img/pexels-markus-spiske-12081657.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 .bodyAboutme {
   height: 100vh;
   background-color: #021b2b;
