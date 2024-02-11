@@ -1,0 +1,110 @@
+@import "./colors";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap');
+
+
+.individualPage{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 100px;
+}
+
+.wrapperIndividual{
+    border: 1px solid crimson;
+    padding: 40px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(177, 12, 67, 0.5);
+    border-radius: 20px;
+    color: $textColor;
+}
+
+.avatar{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 1px solid $textColor;
+    border-radius: 100px;
+    margin: 0 0 30px 0;
+}
+
+.avatar:hover{
+    border: 1px solid crimson;
+    box-shadow:  0 0 30px rgba(177, 12, 67, 0.5);
+    transform: scale(130%);
+    transition: .5s;
+}
+
+.tablaGeneral{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    padding: 10px 0 10px 0;
+}
+
+.datosIndividuo{
+    grid-column: 2;
+    p{
+        padding: 10px 0 10px 0;
+    }
+    
+}
+
+.encabezadosIndividuo{
+    grid-column: 1;
+    p{
+        padding: 10px 0 10px 0;
+    }
+}
+
+
+
+.btnIndividuos{
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    color: crimson;
+    cursor: pointer;
+}
+
+.frenteDNI, .dorsoDNI{
+    border: none;
+    background-color: crimson;
+    color: $textColor;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.frenteDNI:hover{
+    background-color: $variantColor;
+} 
+
+.dorsoDNI:hover{
+    background-color: $variantColor;
+}
+
+.deleteBTN{
+    border: 1px solid crimson;
+    background-color: $secondaryColor;
+    color: $textColor;
+    padding: 10px;
+    margin: 10px 10px 10px 100px;
+    font-weight: bold;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+        color: $textColor;
+        i{
+        font-size: 30px;
+        }
+    }
+}
+
+.deleteBTN:hover{
+    background-color: crimson;
+    transition: .3s;
+    transform: scale(150%);
+}

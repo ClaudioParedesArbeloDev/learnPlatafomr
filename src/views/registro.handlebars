@@ -8,12 +8,17 @@
     </div>
   </div>
   <nav>
-    <div class="buttons">
+    <div class="buttons" id="nav">
+      <span id="close"><i class="fa-solid fa-xmark"></i></span>
       <a href="./"><button class="btn">home</button></a>
       <a href="./cursos"><button class="btn">cursos</button></a>
       <a href="./sobremi"><button class="btn">sobre mi</button></a>
       <a href="./contacto"><button class="btn">contacto</button></a>
     </div>
+    <div>
+      <span id="hamburguer"><i class="fa-solid fa-bars"></i></span>
+    </div>
+    
   </nav>
 </header>
   <form action="registro/registro" method="post" class="formRegistro" enctype="multipart/form-data">
@@ -39,19 +44,25 @@
             <input type="email" name="email" required placeholder="Correo Electrónico">
     </div>
     <div class="input-boxR">
-      <input type="text" name="password" required placeholder="Password">
+      <input type="password" name="password" required placeholder="Password">
     </div>
     <div class="input-boxR">
-      <input type="text" required placeholder="Repita Password">
+      <input type="password" required placeholder="Repita Password">
     </div>
     <div class="fileDNI">
-  <label for="dniFile" class="custom-file-upload">
-    <input type="file" id="dniFile" name="file" required>
-    Suba su foto DNI (máx. 2MB)
-  </label>
-</div>
-
+      <label for="dniFrente" class="custom-file-upload">
+         <input type="file" id="dniFrente" name="frente" required>
+         foto frente DNI
+       </label>
+    </div>
+     <div class="fileDNI">
+      <label for="dniDorso" class="custom-file-upload">
+         <input type="file" id="dniDorso" name="dorso" required>
+         foto dorso DNI
+       </label>
+    </div>
     <button type="submit" class="submitForm">Enviar</button>
+    <p class="advertenciaTamano">Las imagenes no pueden superar los 2mb.</p>
     
   </form>
 

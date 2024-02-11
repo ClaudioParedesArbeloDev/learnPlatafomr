@@ -1,7 +1,8 @@
 import { Router } from "express";
 import registroModel from "../models/register.model.js";
 import multer from "multer";
-import path from "path"
+import sharp from "sharp";
+
 
 const router = Router()
 
@@ -12,7 +13,8 @@ const storage = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         const dni = req.body.dni; 
-        const filename = dni + path.extname(file.originalname);
+        const fileType = file.fieldname;
+        const filename = `${dni}_${fileType}.jpg`;
         cb(null, filename);
     }
         
@@ -31,10 +33,10 @@ router.get('/', async(req, res) =>{
 
 
 
-router.post('/registro', uploader.single('file'), async (req, res) =>{
+router.post('/registro', uploader.fields([{name:'frente', maxCount:1}, {name:'dorso', maxCount:1}]), async (req, res) =>{
     const { nombre, apellido, dni, domicilio, celular, fechaNacimiento, email, password } = req.body;
-    const fotocopia = req.file ? req.file.path : null; // Guarda el nombre de la imagen si se subió, de lo contrario, guarda null
-    
+    const frente = req.files['frente'] ? req.files['frente'][0].filename : null; // Guarda el nombre de la imagen si se subió, de lo contrario, guarda null
+    const dorso = req.files['dorso'] ? req.files['dorso'][0].filename: null;
     try {
         const registro = new registroModel({
             nombre,
@@ -45,7 +47,8 @@ router.post('/registro', uploader.single('file'), async (req, res) =>{
             fechaNacimiento,
             email,
             password,
-            fotocopia
+            frente,
+            dorso,
         });
         await registro.save();
         res.redirect('/registrocompletado/');

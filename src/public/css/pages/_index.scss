@@ -24,10 +24,15 @@ header{
   }
 }
 .hamburguer{
-  color: $textColor;
-  margin-right: 20px;
-  cursor: pointer;
-  font-size: 20px;
+  display: none;
+}
+
+.close{
+  display: none;
+}
+
+.nav-menu{
+  display: none;
 }
 .title{
   
@@ -106,11 +111,10 @@ color: aliceblue;
 
 
 .loginBox{
-position: absolute;
 display: flex;
 width: 60%;
 justify-content: center;
-top: 280px;
+margin-top: 100px;
 }
 
 .wrapper{
@@ -235,10 +239,11 @@ p{
 
 footer{
 display: flex;
-width: 100vw;
 position: absolute;
-bottom: 40px;
+width: 100vw;
+justify-content: center;
 flex-direction: column;
+bottom: 20px;
 p{
     padding-top: 10px;
     color: $textColor;
@@ -310,10 +315,98 @@ background-color: $variantColor;
 backdrop-filter: blur(4px);
 }
 
-@media  (max-width: 700px) {
+@media screen and (max-width: 900px) {
   body{
-    background-image: url(/img/pexels-markus-spiske-12081657.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $primaryColor;
+    background-image: none;
+   
+  }
+  
+  .title{
+    img{
+      width: 50px;
+    }
+    h1{
+    font-size: .8em;
+    }
+    p{
+    font-size: .5em;
+    }
+  }
+  
+  .buttons{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgb(146, 15, 41);
+    padding: .6rem;
+    visibility: hidden;
+    z-index: 2;
+    a{
+      padding-top: 15px;
+    }
+  }
+  
+  .buttons.visible{
+    visibility: visible;
+  }
+  
+  #hamburguer{
+    display: block;
+    color: $textColor;
+    font-size: 1.5em;
+  }
+
+  #close{
+    display: block;
+    color: $textColor;
+    position: absolute;
+    font-size: 1.5rem;
+    right: 35px;
+  }
+  
+  .loginBoxTotal{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .loginBox{
+    display: flex;
+    width: 80%;
+    padding: 0;
+    left: 80px;
+    margin-top: 20px;
+   
+    z-index: 1;
+  }
+  
+  footer{
+    margin-top: 50px;
+    position: relative;
+    p{
+      
+      font-size: .8rem;
+    }
+  }
+  
+  .Btn{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .remember-forgot{
+    text-align: center;
+    flex-direction: column;
+    label{
+      font-size: 1em;
+    }
+    a{
+      font-size: 1em;
+    }
   }
 }

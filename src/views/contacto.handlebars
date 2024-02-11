@@ -7,15 +7,21 @@
     </div>
   </div>
   <nav>
-    <div class="buttons">
+    <div class="buttons" id="nav">
+      <span id="close"><i class="fa-solid fa-xmark"></i></span>
       <a href="./"><button class="btn">home</button></a>
       <a href="./cursos"><button class="btn">cursos</button></a>
       <a href="./sobremi"><button class="btn">sobre mi</button></a>
       <a href="./contacto"><button class="btn">contacto</button></a>
     </div>
+    <div>
+      <span id="hamburguer"><i class="fa-solid fa-bars"></i></span>
+    </div>
+    
   </nav>
 </header>
-<section class="formularioContacto">
+<section class= "wrapperFormulario">
+  <div class="formularioContacto">
 <div class="formContainer">
     <div class="box-info">
         <h1>Contáctate con nosotros</h1>
@@ -56,10 +62,8 @@
         <input type="hidden" name="_captcha" value="false">
     </form>
 </div>
+</div>
 </section>
 
-<footer class="footerCursos">
-  
-  <p><i class="fa-regular fa-copyright"></i><span id="year"></span> - Claudio Paredes Arbelo</p>
-</footer>
+
 <script src="/js/index.js"></script>

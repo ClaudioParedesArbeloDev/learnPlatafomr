@@ -20,11 +20,33 @@
     <h2>Listado alumnos</h2>
 
 <div>
-    {{#each listado}}
-    <div>
-       <p>{{this.nombre}}</p>
-    </div>
-    {{/each}}
+    
+
+    <table>
+      <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Documento</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Domicilio</th>
+      <th>Celular</th>
+      <th>e-mail</th>
+      <th>Ficha</th>
+      </tr>
+      {{#each listado}}
+      <tr>
+      <td>{{this.nombre}}</td>
+      <td>{{this.apellido}}</td>
+      <td>{{this.dni}}</td>
+      <td>{{this.fechaNacimiento}}</td>
+      <td>{{this.domicilio}}</td>
+      <td>{{this.celular}}</td>
+      <td>{{this.email}}</td>
+      <td><button id="ficha">Ver Ficha</button></td>
+      </tr>
+      {{/each}}  
+    </table>
+    
 </div>
 </div>
 <footer>

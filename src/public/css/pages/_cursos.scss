@@ -9,6 +9,14 @@
   padding: 20px 0 20px 0;
 }
 
+#closeC{
+  display: none;
+}
+
+#hamburguerC{
+  display: none;
+}
+
 .btnC {
   font-size: 17px;
   background: transparent;
@@ -53,7 +61,7 @@ color: aliceblue;
 
 
 .cursoFrontEnd{
-  background-image: url(/img/pexels-jéshoots-218863.jpg);
+  background-image: url(/img/pexels-danny-meneses-943096.jpg);
   background-size: cover;
   color: $textColor;
   font-family: 'Roboto Mono', monospace;
@@ -168,4 +176,142 @@ color: aliceblue;
 .socialMediaCursos{
   display: flex;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 900px) {
+  body{
+    background-color: $primaryColor;
+    background-image: none;
+   
+  }
+  
+  .title{
+    img{
+      width: 50px;
+    }
+    h1{
+    font-size: .8em;
+    }
+    p{
+    font-size: .5em;
+    }
+  }
+  
+  .buttonsCursos{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgb(146, 15, 41);
+    padding: .5rem;
+    visibility: hidden;
+    z-index: 2;
+    a{
+      margin-top: 15px;
+    }
+  }
+  
+  .buttonsCursos.visible{
+    visibility: visible;
+  }
+  
+  #hamburguerC{
+    display: block;
+    color: $textColor;
+    font-size: 1.5em;
+  }
+
+  #closeC{
+    display: block;
+    color: $textColor;
+    position: absolute;
+    font-size: 1.5rem;
+    right: 35px;
+  }
+  
+  .up{
+    top: 380px;
+    i{
+      font-size: 2em;
+    }
+  }
+  
+  .partCurso{
+    width:90vw;
+  }
+  .cursoFrontEnd{
+    background-image: none;
+    background-color: $secondaryColor;
+    h2{
+      padding: 50px 10px 30px 30px;
+      font-size: 1.8em;
+    }
+    a{
+      padding: 0 0 0 30px;
+      font-size: 1em;
+      line-height: 3em;
+    }
+  }
+
+  .desarrolloWeb{
+    h3{
+      font-size: 1.7em;
+    }
+    p{
+      font-size: 1em;
+    }
+  }
+  .javaScript{
+    padding: 90px 0 150px 0;
+    h3{
+      padding: 0 0 0 30px;
+      font-size: 1.7em;
+    }
+    p{
+      padding: 0 0 0 30px;
+      font-size: 1em;
+    }
+  }
+
+  .reactJs{
+    padding: 40px 0 150px 0;
+    h3{
+      padding: 0 0 0 30px;
+      font-size: 1.7em;
+    }
+    p{
+      padding: 0 0 0 30px;
+      font-size: 1em;
+    }
+  }
+
+  .footerCursos{
+    position: absolute;
+    bottom: 20px;
+
+    p{
+      
+      font-size: .8rem;
+    }
+  }
+  
+  .Btn{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .remember-forgot{
+    text-align: center;
+    flex-direction: column;
+    label{
+      font-size: 1em;
+    }
+    a{
+      font-size: 1em;
+    }
+  }
 }

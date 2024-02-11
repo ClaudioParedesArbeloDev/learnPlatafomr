@@ -12,8 +12,9 @@ const registroSchemma = new mongoose.Schema({
     fechaNacimiento: String,
     email: String,
     password: String,
-    fotocopia: String,
-    avatar: String
+    frente: String,
+    dorso: String,
+    avatar: String,
 })
 
 const registroModel = mongoose.model(registroCollection, registroSchemma)

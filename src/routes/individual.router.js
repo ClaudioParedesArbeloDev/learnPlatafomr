@@ -3,15 +3,18 @@ import registroModel from "../models/register.model.js";
 
 const router = Router()
 
-router.get('/delete/:name', async (req, res) =>{
-    const name = req.params.nombre
-    await registroModel.deleteOne({name})
+router.get('/delete/:dni', async (req, res) =>{
+    const dni = req.params.dni
+    await registroModel.deleteOne(dni)
     res.redirect('/listado')
 })
 
-router.get('/:name', async(req, res) =>{
-    const name = req.params.nombre
-    const alumno = await registroModel.findOne({name})
+router.get('/:dni', async(req, res) =>{
+    const dni = req.params.dni
+    const alumno = await registroModel.findOne({dni})
+    if (!alumno.avatar){
+        alumno.avatar = 'img/avatar.png';
+    }
     res.render('individual', alumno)
 })
 

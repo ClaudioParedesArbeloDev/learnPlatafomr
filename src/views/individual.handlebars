@@ -1,3 +1,52 @@
-<h2>{{nombre}}</h2>
-<h3>{{apellido}}</h3>
-<a href="/individual/delete/{{nombre}}">Borrar</a>
+<header>
+  <div class="title">
+    <img src="/img/fullstack.svg" alt="logo" />
+    <div>
+      <h1>Claudio Paredes Arbelo</h1>
+      <p>Desarrollador Fullstack y Educador</p>
+    </div>
+  </div>
+  <nav>
+    <div class="buttons">
+      <a href="/"><button class="btn">home</button></a>
+      <a href="/cursos"><button class="btn">cursos</button></a>
+      <a href="/sobremi"><button class="btn">sobre mi</button></a>
+      <a href="/contacto"><button class="btn">contacto</button></a>
+    </div>
+  </nav>
+</header>
+<section class="individualPage">
+<div class="wrapperIndividual">
+<img src="/{{avatar}}" alt="avatar" class="avatar">
+  <div class="tablaGeneral">
+  
+    <div class="encabezadosIndividuo">
+      <p>nombre:</p>
+      <p>apellido:</p>
+      <p>nro documento:</p>
+      <p>domicilio:</p>
+      <p>nro celular:</p>
+      <p>fecha de nacimiento:</p>
+      <p>e-mail:</p>
+    </div>
+    <div class="datosIndividuo">
+      <p>{{nombre}}</p>
+      <p>{{apellido}}</p>
+      <p>{{dni}}</p>
+      <p>{{domicilio}}</p>
+      <p>{{celular}}</p>
+      <p>{{fechaNacimiento}}</p>
+      <p>{{email}}</p>
+    </div>
+   
+  </div>
+<button class="frenteDNI">DNI Frente</button>
+<button class="dorsoDNI">DNI Dorso</button>
+
+
+
+<button class="deleteBTN"><a href="/individual/delete/{{dni}}"><i class="fa-regular fa-trash-can"></i></a></button>
+
+</div>
+</section>
+<script src="/js/individual.js"></script>

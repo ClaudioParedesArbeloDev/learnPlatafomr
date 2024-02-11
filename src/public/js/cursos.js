@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const currentYear = document.getElementById("year");
+    const currentYear = document.getElementById("yearC");
    currentYear.textContent = new Date().getFullYear();
   });
 
-  const nav = document.querySelector("#nav");
-  const open = document.querySelector("#hamburguer")
-  const close = document.querySelector("#close")
+  const nav = document.querySelector("#navC");
+  const open = document.querySelector("#hamburguerC")
+  const close = document.querySelector("#closeC")
 
   open.addEventListener("click", () => {
     nav.classList.add("visible")

@@ -82,10 +82,17 @@
     }
 }
 
+.advertenciaTamano{
+    font-family: 'Roboto Mono', monospace;
+    color: #a3a3a3;
+    text-align: start;
+    font-size: .7rem;
+}
+
 .custom-file-upload {
     font-family: 'Roboto Mono', monospace;
     display: flex;
-    width: 300px;
+    width: 200px;
     overflow: hidden;
     margin-right: 10px; 
     padding: 10px 20px; 
@@ -122,3 +129,9 @@
 }
 
   
+@media screen and (max-width: 900px) {
+    .formRegistro{
+        width: 90%;
+        padding: 20px 0 0 15px;
+    }
+}
