@@ -40,13 +40,36 @@
     </div>
    
   </div>
-<button class="frenteDNI">DNI Frente</button>
-<button class="dorsoDNI">DNI Dorso</button>
+<button class="frenteDNI"><a href="">DNI Frente</a></button>
+<button class="dorsoDNI"><a href="">DNI Dorso</a></button>
 
 
 
-<button class="deleteBTN"><a href="/individual/delete/{{dni}}"><i class="fa-regular fa-trash-can"></i></a></button>
+<button class="deleteBTN"><a href="/individual/delete/{{dni}}">Eliminar</a></button>
 
 </div>
+
 </section>
+
+  <section class="modalDNIfrente">
+        <div class="modal__containerDNIfrente">
+          <a href="#" class="modal__closeFrente"><i class="fa-solid fa-xmark"></i></a>
+            
+            <p class="modal__title">DNI frente de {{nombre}} {{apellido}}</p>
+            <img src="/{{frente}}" alt="" class="imgModal">
+          </div>
+    </section>
+
+    <section class="modalDNIdorso">
+        <div class="modal__containerDNIdorso">
+          <a href="#" class="modal__closeDorso"><i class="fa-solid fa-xmark"></i></a>
+            
+            <p class="modal__title">DNI dorso de {{nombre}} {{apellido}}</p>
+            <img src="/{{dorso}}" alt="" class="imgModal">
+          </div>
+    </section>
+
+<div class="wrapperBtnListado">
+    <button class="btnListado"><a href="/listado">listado</a></button>
+</div>
 <script src="/js/individual.js"></script>

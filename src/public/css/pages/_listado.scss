@@ -29,7 +29,14 @@
             border-radius: 20px;
             padding: 10px;
             cursor: pointer;
-            color: $textColor;
+            
+            a{
+                text-decoration: none;
+                color: $textColor;
+            }
+        }
+        button:hover{
+            background-color: $variantColor;
         }
     }
 }

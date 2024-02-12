@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/delete/:dni', async (req, res) =>{
     const dni = req.params.dni
-    await registroModel.deleteOne(dni)
+    await registroModel.deleteOne({dni})
     res.redirect('/listado')
 })
 

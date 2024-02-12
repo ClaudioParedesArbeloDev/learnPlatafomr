@@ -76,6 +76,11 @@
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $textColor;
+    }
 }
 
 .frenteDNI:hover{
@@ -106,5 +111,112 @@
 .deleteBTN:hover{
     background-color: crimson;
     transition: .3s;
-    transform: scale(150%);
+    transform: scale(120%);
+}
+
+.wrapperBtnListado{
+    display: flex;
+    justify-content: center;
+}
+
+.btnListado{
+    border: none;
+    background-color: $variantColor;
+    color: $textColor;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $textColor;
+    }
+}
+
+.btnListado:hover{
+    background-color: $secondaryColor;
+    transition: .3s;
+}
+
+.modalDNIfrente, .modalDNIdorso{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modalDNIfrente--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modalDNIdorso--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__containerDNIfrente, .modal__containerDNIdorso{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal__title{
+    font-size: 1rem;
+    color: $textColor;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.modal__paragraph{
+    margin-bottom: 10px;
+}
+
+.modal__img{
+    width: 90%;
+    max-width: 300px;
+}
+
+.modal__closeFrente, .modal__closeDorso{
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 1em 3em;
+    border: none;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal__closeFrente:hover{
+    color: crimson;
+    
+}
+
+.imgModal{
+    max-width: 800px;
+    max-height: 800px;
 }
