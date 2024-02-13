@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1374,4 +1375,114 @@ footer p i {
 .imgModal {
   max-width: 800px;
   max-height: 800px;
+}
+
+:root {
+  --width:300px;
+  --padding: 10px;
+  --bgcolor: rgb(52, 52, 52);
+  --hovercolor: rgb(23, 23, 23);
+  --width-collapsed: 50px;
+}
+
+.bodyPlataforma {
+  background-image: none;
+  background-color: #02031a;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  margin-left: var(--width-collapsed);
+}
+
+.body-expanded {
+  margin-left: var(--width);
+}
+
+#main-conteiner {
+  color: #fff;
+}
+
+#sidemenu {
+  background-color: var(--bgcolor);
+  color: #fff;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#sidemenu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sidemenu #header {
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header #title {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#sidemenu #header #title, #sidemenu #header #menu-btn {
+  vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  width: var(--width-collapsed);
+  box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover {
+  background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .btn-hamburguer {
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+}
+
+#sidemenu #profile {
+  border-bottom: solid 1px var(--hovercolor);
+  padding: var(--padding) 0;
+  text-align: center;
+}
+
+#sidemenu #profile #photo img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+#sidemenu #profile #photo, #sidemenu #profile #name {
+  font-size: 24px;
+  padding: var(--padding) 0;
+  overflow: hidden;
+}
+
+#sidemenu #menu-items {
+  overflow: hidden;
+}
+
+#sidemenu #menu-items .item {
+  width: var(--width);
+}
+
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title {
+  font-size: 14px;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#sidemenu #menu-items .item a:hover {
+  background-color: var(--hovercolor);
 }/*# sourceMappingURL=style.css.map */
