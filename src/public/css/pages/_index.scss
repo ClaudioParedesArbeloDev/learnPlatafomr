@@ -132,7 +132,7 @@ align-items: center;
 font-family: 'Roboto Mono', monospace;
 }
 .form-box{
-width: 100%;
+width: 100vw;
 padding: 40px;
 h2{
   font-size: 2em;
@@ -239,8 +239,8 @@ p{
 
 footer{
 display: flex;
-position: absolute;
 width: 100vw;
+margin-top: 100px;
 justify-content: center;
 flex-direction: column;
 bottom: 20px;

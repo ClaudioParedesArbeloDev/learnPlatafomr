@@ -12,6 +12,7 @@ router.get('/delete/:dni', async (req, res) =>{
 router.get('/:dni', async(req, res) =>{
     const dni = req.params.dni
     const alumno = await registroModel.findOne({dni})
+    console.log(alumno)
     if (!alumno.avatar){
         alumno.avatar = 'img/avatar.png';
     }

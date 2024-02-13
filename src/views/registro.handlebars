@@ -21,7 +21,7 @@
     
   </nav>
 </header>
-  <form action="registro/registro" method="post" class="formRegistro" enctype="multipart/form-data">
+  <form action="/registro/registro" method="post" class="formRegistro" enctype="multipart/form-data">
     <div class="input-boxR">
       <input type="text" name="nombre" required placeholder="Nombre Completo">
     </div>
@@ -29,7 +29,7 @@
       <input type="text" name="apellido" required placeholder="Apellido">
     </div>
     <div class="input-boxR">
-      <input type="text" name="dni" required placeholder="Numero de documento">
+      <input type="text" name="dni" required placeholder="Numero de documento (sin puntos, ni separaciones)">
     </div>
     <div class="input-boxR">
       <input type="text" name="domicilio" required placeholder="Domicilio">
@@ -47,17 +47,17 @@
       <input type="password" name="password" required placeholder="Password">
     </div>
     <div class="input-boxR">
-      <input type="password" required placeholder="Repita Password">
+      <input type="password" name="repitaPassword" required placeholder="Repita Password">
     </div>
     <div class="fileDNI">
       <label for="dniFrente" class="custom-file-upload">
-         <input type="file" id="dniFrente" name="frente" required>
+         <input type="file" id="dniFrente" name="frente">
          foto frente DNI
        </label>
     </div>
      <div class="fileDNI">
       <label for="dniDorso" class="custom-file-upload">
-         <input type="file" id="dniDorso" name="dorso" required>
+         <input type="file" id="dniDorso" name="dorso">
          foto dorso DNI
        </label>
     </div>

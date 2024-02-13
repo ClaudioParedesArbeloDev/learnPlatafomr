@@ -134,7 +134,7 @@ header nav {
 }
 
 .form-box {
-  width: 100%;
+  width: 100vw;
   padding: 40px;
 }
 .form-box h2 {
@@ -237,8 +237,8 @@ header nav {
 
 footer {
   display: flex;
-  position: absolute;
   width: 100vw;
+  margin-top: 100px;
   justify-content: center;
   flex-direction: column;
   bottom: 20px;
@@ -398,20 +398,20 @@ footer p i {
 }
 .bodyAboutme {
   height: 100vh;
-  background-color: #021b2b;
+  background-image: none;
+  background-color: #02031a;
   font-family: "Poppins", sans-serif;
 }
 
 .mainAbout {
-  margin: 20px 90px 0 80px;
+  margin: 20px 60px 0 80px;
   color: #fff;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 .pOne {
-  background: rgba(2, 27, 43, 0.3);
-  display: grid;
+  background: rgba(31, 31, 32, 0.7);
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
   gap: 0.2em;
@@ -419,7 +419,8 @@ footer p i {
   font-size: 2.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .grid-item {
@@ -428,7 +429,7 @@ footer p i {
 }
 
 .pTwo {
-  background: rgba(2, 27, 43, 0.3);
+  background: rgba(31, 31, 32, 0.7);
   padding: 30px 40px 30px 40px;
   line-height: 2.5rem;
 }
@@ -437,41 +438,6 @@ footer p i {
   font-size: 1.2rem;
   text-align: justify;
   padding-bottom: 15px;
-}
-
-.footerAbout {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-.footerAbout__wrapper {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 40px 15px 40px;
-  background: rgba(2, 27, 43, 0.3);
-  color: #fff;
-  align-items: center;
-}
-.footerAbout__wrapper p {
-  color: #fff;
-}
-.footerAbout__wrapper p i {
-  margin-right: 10px;
-}
-.footerAbout__wrapper p span {
-  margin-right: 10px;
-}
-
-.socialMediaFooter a {
-  color: #fff;
-  text-decoration: none;
-  list-style: none;
-  margin-right: 15px;
-  font-size: 1.5rem;
-}
-.socialMediaFooter a:hover {
-  color: #b10c43;
 }
 
 @media screen and (max-width: 900px) {
@@ -492,14 +458,6 @@ footer p i {
   }
   .pTwo p {
     font-size: 0.8rem;
-  }
-  .footerAbout {
-    position: relative;
-    margin: 0;
-  }
-  .footerAbout__wrapper {
-    display: flex;
-    flex-direction: column;
   }
 }
 #buttonsCursos {
@@ -800,7 +758,6 @@ footer p i {
 }
 
 .formularioContacto {
-  width: 60%;
   border: 2px solid #797373;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
