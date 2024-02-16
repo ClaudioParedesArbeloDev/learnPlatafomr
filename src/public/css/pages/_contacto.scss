@@ -10,7 +10,7 @@
     align-items: center;
 }
 .formularioContacto{
-    border: 2px solid #797373;
+    border: 2px solid $secondaryColor;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     backdrop-filter: blur(20px);
@@ -27,7 +27,7 @@
 }
 
 .box-info{
-    color: #fff;
+    color: $textColor;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -45,7 +45,7 @@
     p{
         font-size: 1rem;
         i{
-           color: crimson;
+           color: $variantColor;
            margin-right: 10px;
            font-size: 25px; 
         }
@@ -59,17 +59,17 @@
         text-decoration: none;
         width: 40px;
         height: 40px;
-        background: crimson;
+        background: $variantColor;
         text-align: center;
         transition: .3s;
         i{
-            color: #fff;
+            color: $textColor;
             line-height: 40px;
             font-size: 20px;
         }
     }
     a:hover{
-        background: rgb(150, 13, 40);
+        background: $secondaryColor;
     }
 }
 
@@ -79,8 +79,8 @@
     text-align: center;
     gap: 15px;
     button{
-        background: crimson;
-        color: #fff;
+        background: $variantColor;
+        color: $textColor;
         border: none;
         outline: none;
         cursor: pointer;
@@ -89,7 +89,7 @@
         transition: .2s;
     }
     button:hover{
-        background: rgb(150, 13, 40);
+        background: $secondaryColor;
     }
 }
 
@@ -104,14 +104,14 @@
         border: 3px solid transparent;
         letter-spacing: 1px;
         transition: .3s;
-        color: #fff;
+        color: $textColor;
     }
     input:focus{
-        border-bottom: 3px solid crimson;
+        border-bottom: 3px solid $variantColor;
         animation: shake .2s;
     }
     input:focus ~ i{
-        color: crimson;
+        color: $variantColor;
     }
     input::placeholder{
         color: #a3a3a3;
@@ -123,12 +123,12 @@
         border: 3px solid transparent;
         letter-spacing: 1px;
         transition: .3s;
-        color: #fff;
+        color: $textColor;
         padding: 10px;
         outline: none;
     }
     textarea:focus{
-        border-bottom: 3px solid crimson;
+        border-bottom: 3px solid $variantColor;
         animation: shake .2s;
     }
     textarea::placeholder{

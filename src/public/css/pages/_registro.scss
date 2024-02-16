@@ -1,7 +1,10 @@
+@import "./colors";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto+Mono:wght@100;400&display=swap');
+
 .registerPage{
     background-image: url(/img/pexels-danny-meneses-943096.jpg);
     background-size: cover;
-    color: #fff;
+    color: $textColor;
     font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
@@ -18,8 +21,8 @@
     text-align: center;
     gap: 15px;
     button{
-        background: crimson;
-        color: #fff;
+        background: $variantColor;
+        color: $textColor;
         border: none;
         outline: none;
         cursor: pointer;
@@ -28,7 +31,7 @@
         transition: .2s;
     }
     button:hover{
-        background: rgb(150, 13, 40);
+        background: $secondaryColor;
     }
 }
 
@@ -43,14 +46,14 @@
         border: 3px solid transparent;
         letter-spacing: 1px;
         transition: .3s;
-        color: #fff;
+        color: $textColor;
     }
     input:focus{
-        border-bottom: 3px solid crimson;
+        border-bottom: 3px solid $variantColor;
         animation: shake .2s;
     }
     input:focus ~ i{
-        color: crimson;
+        color: $variantColor;
     }
     input::placeholder{
         color: #a3a3a3;
@@ -62,12 +65,12 @@
         border: 3px solid transparent;
         letter-spacing: 1px;
         transition: .3s;
-        color: #fff;
+        color: $textColor;
         padding: 10px;
         outline: none;
     }
     textarea:focus{
-        border-bottom: 3px solid crimson;
+        border-bottom: 3px solid $variantColor;
         animation: shake .2s;
     }
     textarea::placeholder{
@@ -96,14 +99,14 @@
     overflow: hidden;
     margin-right: 10px; 
     padding: 10px 20px; 
-    background-color: crimson; 
+    background-color: $variantColor; 
     color: $textColor; 
     border: none;
     border-radius: 5px;
     cursor: pointer; 
   }
   .custom-file-upload:hover{
-    background: rgb(150, 13, 40);
+    background: $secondaryColor;
   }
   .custom-file-upload input[type="file"] {
     position: absolute;

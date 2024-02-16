@@ -57,6 +57,13 @@ header{
   }
 }
 
+#close{
+  display: none;
+}
+
+#hamburguer{
+  display: none;
+}
 
 .btn {
   font-size: 17px;
@@ -122,10 +129,10 @@ position: relative;
 width: 400px;
 height: 440px;
 background: transparent;
-border: 2px solid rgba(177, 12, 67, 0.5);
+border: 2px solid $secondaryColor;
 border-radius: 20px;
 backdrop-filter: blur(20px);
-box-shadow: 0 0 30px rgba(177, 12, 67, 0.5);
+box-shadow: 0 0 30px $secondaryColor;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -217,6 +224,10 @@ cursor: pointer;
 font-size: 1em;
 color: $textColor;
 font-weight: 500;
+}
+
+.btnr:hover{
+  background: $secondaryColor;
 }
 
 .login-register{
@@ -342,7 +353,7 @@ backdrop-filter: blur(4px);
     right: 0;
     flex-direction: column;
     align-items: end;
-    background-color: rgb(146, 15, 41);
+    background-color: $secondaryColor;
     padding: .6rem;
     visibility: hidden;
     z-index: 2;
@@ -375,6 +386,8 @@ backdrop-filter: blur(4px);
     justify-content: center;
   }
   
+  
+
   .loginBox{
     display: flex;
     width: 80%;

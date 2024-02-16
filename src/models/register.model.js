@@ -15,6 +15,18 @@ const registroSchemma = new mongoose.Schema({
     frente: String,
     dorso: String,
     avatar: String,
+    nickname: String,
+    courses: {
+        type:[
+            {
+                course:{
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: "courses"
+                }
+            }
+        ],
+        default:[]
+    }
 })
 
 const registroModel = mongoose.model(registroCollection, registroSchemma)

@@ -206,7 +206,7 @@ color: aliceblue;
     right: 0;
     flex-direction: column;
     align-items: end;
-    background-color: rgb(146, 15, 41);
+    background-color: $secondaryColor;
     padding: .5rem;
     visibility: hidden;
     z-index: 2;
@@ -245,7 +245,7 @@ color: aliceblue;
   }
   .cursoFrontEnd{
     background-image: none;
-    background-color: $secondaryColor;
+    background-color: $primaryColor;
     h2{
       padding: 50px 10px 30px 30px;
       font-size: 1.8em;
