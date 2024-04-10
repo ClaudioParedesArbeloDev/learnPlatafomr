@@ -53,7 +53,7 @@ app.use('/registrocompletado', registrocompletadoRouter)
 
 
 //conexion a base de datos
-const URL = "mongodb+srv://claudioparedes:Cabeza2$@cluster1.rimje8x.mongodb.net/?retryWrites=true&w=majority"
+
 
 
 mongoose.connect(URL, {
